@@ -1,0 +1,13 @@
+@import "tailwindcss";
+.bg-color-1{
+    background-color: #f2eaf7;
+}
+.bg-color-2{
+    background-color: #c59dd9;
+}
+.bg-color-3{
+    background-color: #7a3f91;
+}
+.bg-color-4{
+    background-color: #2b0d3e;
+}
