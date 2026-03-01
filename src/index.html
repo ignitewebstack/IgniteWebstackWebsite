@@ -23,11 +23,11 @@
                 <a href="#contact">Contact</a>
             </div>
 
-            <div class="hidden">
+            <!-- <div class="hidden">
 
                 <img src="../Assets/Logo Only png.png" alt=""
                     class="h-8 w-auto rounded-full bg-black lg:bg-transparent lg:h-10 lg:hover:bg-black border ease-in duration-400">
-            </div>
+            </div> -->
 
             <div class="lg:hidden mr-2" id="menuToggler">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" class="h-8 w-auto fill-black ">
@@ -956,35 +956,35 @@
     </div>
 
     <div class="container p-4 ">
-        <form action="submit"
+        <form action="" id="form"
             class="p-5 flex flex-col items-center bg-linear-to-br from-blue-100 to-blue-500 rounded-2xl space-y-2 text-black lg:flex-row lg:flex-wrap lg:justify-center lg:py-10 lg:space-y-5 lg:place-items-start">
 
             <div class="flex flex-col  space-y-1 lg:w-1/2 lg:ps-20">
                 <label for="" class=" font-medium ">Name</label>
                 <input type="text" class="h-10 w-80 border rounded-xl p-3 lg:w-[90%]"
-                    placeholder="Enter Your name Here ">
+                    placeholder="Enter Your name Here " id="name" required>
             </div>
 
             <div class="flex flex-col space-y-1 lg:w-1/2 lg:ps-20">
                 <label for="" class=" font-medium">Mobile</label>
                 <input type="text" class="h-10 w-80 border rounded-xl p-3 lg:w-[90%]"
-                    placeholder="Enter Your Mobile Here ">
+                    placeholder="Enter Your Mobile Here " id="mobile" required>
             </div>
 
             <div class="flex flex-col space-y-1 lg:w-1/2 lg:ps-20 grow-0">
                 <label for="" class=" font-medium">Email</label>
                 <input type="text" class="h-10 w-80 border rounded-xl p-3 lg:w-[90%]"
-                    placeholder="Enter Your Email Here ">
+                    placeholder="Enter Your Email Here " id="email" >
             </div>
 
 
             <div class="flex flex-col space-y-1 lg:w-1/2 lg:ps-20 justify-center lg:pt-0">
                 <label for="" class=" font-medium">Message</label>
                 <textarea name="" id="" class="w-80 border rounded-xl p-3 lg:w-[90%] min-h-15 max-h-40 "
-                    placeholder="Enter Your Message Here "></textarea>
+                    placeholder="Enter Your Message Here " id="message"></textarea>
             </div>
 
-            <button class="bg-blue-200 p-2 px-6  rounded-xl  border-black border-0 text-black mt-4">Submit</button>
+            <button class="bg-blue-200 p-2 px-6  rounded-xl  border-black border-0 text-black mt-4" id="submit" type="submit">Submit</button>
         </form>
     </div>
 

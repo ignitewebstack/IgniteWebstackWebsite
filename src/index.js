@@ -2,7 +2,14 @@
 const menuToggler=document.getElementById('menuToggler');
 const menuBar=document.querySelector('#menuBar');
 
-const name=document.get
+const name=document.querySelector('#name');
+const mobile=document.querySelector('#mobile');
+const email=document.querySelector('#email');
+const message=document.querySelector('#message');
+
+const form=document.querySelector('#form');
+
+
 
 
 
@@ -23,4 +30,23 @@ document.addEventListener('click',(event)=>{
         menuBar.classList.add('hidden');
     }
     
+})
+
+
+
+form.addEventListener('submit',(event)=>{
+    event.preventDefault();
+
+    let userName=name.value;
+    let userMobile='91'+mobile.value;
+    let userEmail=email.value;
+    let userMessage=message.value;
+
+    form.reset();
+
+    console.log(userMobile);
+    
+
+
+
 })
