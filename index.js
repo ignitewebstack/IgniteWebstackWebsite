@@ -32,21 +32,28 @@ document.addEventListener('click',(event)=>{
     
 })
 
-
+function encode(input){
+    return encodeURIComponent(input);
+}
 
 form.addEventListener('submit',(event)=>{
     event.preventDefault();
 
-    let userName=name.value;
-    let userMobile='91'+mobile.value;
+    let userName=name.value.trim();
+    let userMobile=mobile.value;
     let userEmail=email.value;
-    let userMessage=message.value;
+    let userMessage=message.value.trim();
 
     form.reset();
+
+    let finalMessage=`Hello Sir ,\nThis is ${userName} I Likely To Talk With You About Website Making\nMy Contact Informations :\nMobile : ${userMobile}\nEmail : ${userEmail}\nMessage :${userMessage}`;
 
     console.log(userMobile);
     
 
+    let whatsappLink=`https://wa.me/918925999751?text=${encode(finalMessage)}`
 
+    window.open(whatsappLink,'_blank');
 
 })
+
