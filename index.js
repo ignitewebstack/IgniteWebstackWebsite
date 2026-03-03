@@ -57,3 +57,34 @@ form.addEventListener('submit',(event)=>{
 
 })
 
+
+// Cards Initialization
+let cards=[document.getElementById('economy'),document.getElementById('business'),document.getElementById('premium'),document.getElementById('elite')];
+// animateCard(cards[0]);
+
+
+// cards[0].addEventListener('animationstart',setTimeout(()=>{
+//     let current=0;
+//     console.log(current+1+"start");
+//     current++;
+//     setTimeout(()=>{
+//         console.log(current-1+"stops");
+//     })
+    
+// }),4500)
+
+
+
+// Card Animation Functions
+
+// function animateCard(card){
+//     card.classList.add('animate-cardsScroll');
+// }
+
+// setTimeout(()=>{
+//     let current=0;
+
+
+// })
+
+

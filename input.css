@@ -11,3 +11,52 @@
 .bg-color-4{
     background-color: #2b0d3e;
 }
+
+/* @theme{
+    --animate-cardsScroll:cardsScroll 5s linear infinite;
+
+    @keyframes cardsScroll{
+        0%{
+            transform:translatex(0%) scale(0.8)
+        }
+        10%{
+            transform:translatex(-110%) scale(1)
+        }
+        90%{
+            transform:translatex(-110%) scale(1)
+        }
+        100%{
+            transform:translatex(-220%) scale(0.8)
+        }
+    }
+} */
+
+@theme{
+    --animate-cardsScroll2:cardsScroll2 18s linear infinite;
+
+
+    @keyframes cardsScroll2{
+        0%{
+            transform:translatex(0%) scale(0.8) 
+        }
+        2.5%{
+            transform:translatex(-110%) scale(1) /*exit */
+        }
+        25%{
+            transform:translatex(-110%) scale(1)   /*Stays */
+        }
+        27.5%{
+             transform:translatex(-220%) scale(0.8)  /*exit */
+        }
+        100%{
+            transform:translatex(-220%)
+        }
+
+        
+
+
+
+        
+    }
+}
+
