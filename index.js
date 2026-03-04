@@ -60,31 +60,81 @@ form.addEventListener('submit',(event)=>{
 
 // Cards Initialization
 let cards=[document.getElementById('economy'),document.getElementById('business'),document.getElementById('premium'),document.getElementById('elite')];
-// animateCard(cards[0]);
+animateCard(cards[0]);
+let currentCard=0;
 
-
-// cards[0].addEventListener('animationstart',setTimeout(()=>{
-//     let current=0;
-//     console.log(current+1+"start");
-//     current++;
-//     setTimeout(()=>{
-//         console.log(current-1+"stops");
-//     })
+setInterval(()=>{
+    if(currentCard<3)
+        currentCard++;
     
-// }),4500)
+    else
+    {
+        currentCard=0;
+        // resetAnimation();
+    }
+
+    animateCard(cards[currentCard]);
+
+    setTimeout(() => {
+        
+        if(currentCard==0){
+            removeAnimate(cards[3]);
+        }
+        else{
+            removeAnimate(cards[currentCard-1]);
+        }
+
+    }, 500);
+
+    console.log(currentCard+'triggerd');
+    
+    
+},4500)
 
 
 
-// Card Animation Functions
+function animateCard(card){
+     void card.offsetWidth; 
+    card.classList.add('animate-cardsScroll');
+}
 
-// function animateCard(card){
-//     card.classList.add('animate-cardsScroll');
-// }
-
-// setTimeout(()=>{
-//     let current=0;
+function removeAnimate(card){
+    card.classList.remove('animate-cardsScroll');
+}
 
 
-// })
+// Fade Enter Animation
 
+let leftContainers=document.querySelectorAll('.entry');
+const observer=new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+
+        if(entry.isIntersecting){
+            
+            if(entry.target.classList.contains('left'))
+            {
+                entry.target.classList.add('animate-leftEnter');
+            }
+            else if(entry.target.classList.contains('right')){
+                
+                entry.target.classList.add('animate-rightEnter');
+            }
+
+            entry.target.classList.remove('opacity-0');
+            
+            
+        }
+
+
+    })
+},{
+    
+    threshold:0.5
+
+})
+
+
+leftContainers.forEach((element)=>{
+    observer.observe(element);
+})
 

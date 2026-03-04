@@ -12,8 +12,8 @@
     background-color: #2b0d3e;
 }
 
-/* @theme{
-    --animate-cardsScroll:cardsScroll 5s linear infinite;
+@theme{
+    --animate-cardsScroll:cardsScroll 5s linear ;
 
     @keyframes cardsScroll{
         0%{
@@ -29,9 +29,9 @@
             transform:translatex(-220%) scale(0.8)
         }
     }
-} */
+}
 
-@theme{
+/* @theme{
     --animate-cardsScroll2:cardsScroll2 18s linear infinite;
 
 
@@ -40,23 +40,52 @@
             transform:translatex(0%) scale(0.8) 
         }
         2.5%{
-            transform:translatex(-110%) scale(1) /*exit */
+            transform:translatex(-110%) scale(1) 
         }
         25%{
-            transform:translatex(-110%) scale(1)   /*Stays */
+            transform:translatex(-110%) scale(1)   
         }
         27.5%{
-             transform:translatex(-220%) scale(0.8)  /*exit */
+             transform:translatex(-220%) scale(0.8)  
         }
         100%{
             transform:translatex(-220%)
         }
-
         
+    }
+} */
 
 
 
-        
+/* Fade Enter */
+
+@theme{
+    --animate-leftEnter:enterLeft 01s ease-in-out ;
+
+    @keyframes enterLeft{
+        from{
+            transform:translateX(-100%);
+            opacity:0;
+        }
+        to{
+            transform:translateX(-00%);
+            opacity:1;
+        }
     }
 }
 
+
+@theme{
+    --animate-rightEnter:enterRight 01s ease-in-out ;
+
+    @keyframes enterRight{
+        from{
+            transform:translateX(100%);
+            opacity:0;
+        }
+        to{
+            transform:translateX(-00%);
+            opacity:1;
+        }
+    }
+}
