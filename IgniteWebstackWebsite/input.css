@@ -1,0 +1,91 @@
+@import "tailwindcss";
+.bg-color-1{
+    background-color: #f2eaf7;
+}
+.bg-color-2{
+    background-color: #c59dd9;
+}
+.bg-color-3{
+    background-color: #7a3f91;
+}
+.bg-color-4{
+    background-color: #2b0d3e;
+}
+
+@theme{
+    --animate-cardsScroll:cardsScroll 5s linear ;
+
+    @keyframes cardsScroll{
+        0%{
+            transform:translatex(0%) scale(0.8)
+        }
+        10%{
+            transform:translatex(-110%) scale(1)
+        }
+        90%{
+            transform:translatex(-110%) scale(1)
+        }
+        100%{
+            transform:translatex(-220%) scale(0.8)
+        }
+    }
+}
+
+/* @theme{
+    --animate-cardsScroll2:cardsScroll2 18s linear infinite;
+
+
+    @keyframes cardsScroll2{
+        0%{
+            transform:translatex(0%) scale(0.8) 
+        }
+        2.5%{
+            transform:translatex(-110%) scale(1) 
+        }
+        25%{
+            transform:translatex(-110%) scale(1)   
+        }
+        27.5%{
+             transform:translatex(-220%) scale(0.8)  
+        }
+        100%{
+            transform:translatex(-220%)
+        }
+        
+    }
+} */
+
+
+
+/* Fade Enter */
+
+@theme{
+    --animate-leftEnter:enterLeft 01s ease-in-out ;
+
+    @keyframes enterLeft{
+        from{
+            transform:translateX(-100%);
+            opacity:0;
+        }
+        to{
+            transform:translateX(-00%);
+            opacity:1;
+        }
+    }
+}
+
+
+@theme{
+    --animate-rightEnter:enterRight 01s ease-in-out ;
+
+    @keyframes enterRight{
+        from{
+            transform:translateX(100%);
+            opacity:0;
+        }
+        to{
+            transform:translateX(-00%);
+            opacity:1;
+        }
+    }
+}

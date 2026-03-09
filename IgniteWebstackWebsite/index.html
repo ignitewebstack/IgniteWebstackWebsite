@@ -1,0 +1,1990 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ignite</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+
+  <body class="relative">
+    <nav
+      class="flex flex-col items-center w-full sticky z-10 top-0 backdrop-blur-sm bg-linear-to-b from-gray-300 shadow"
+    >
+      <div
+        class="container flex items-center p-3 justify-between lg:justify-around"
+      >
+        <img
+          class="h-14 w-55 rounded-full lg:h-15 lg:w-60"
+          src="./Sources/logo (1).webp"
+          alt=""
+        />
+
+        <div class="text-xs lg:text-base hidden lg:flex gap-15">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <!-- <div class="hidden">
+
+                <img src="../Assets/Logo Only png.png" alt=""
+                    class="h-8 w-auto rounded-full bg-black lg:bg-transparent lg:h-10 lg:hover:bg-black border ease-in duration-400">
+            </div> -->
+
+        <div class="lg:hidden mr-2" id="menuToggler">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 72 72"
+            class="h-8 w-auto fill-black"
+          >
+            <path
+              d="M56 48c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 48 54.798 48 56 48zM56 32c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 32 54.798 32 56 32zM56 16c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 16 54.798 16 56 16z"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <!-- <div class=" flex flex-col p-4 space-y-2 bg-gradient-to-t from-amber-50 to-transparent w-full items-center text-black font-medium hidden lg:hidden"
+            id="menuBar">
+
+            <div class="w-[30%] flex active:border-b  active:ease-in active:">
+                <a href="#home" class=" mx-auto">Home</a>
+            </div>
+
+            <div class="w-[30%] flex active:border-b">
+                <a href=" #services" class=" mx-auto">Services</a>
+            </div>
+
+            <div class="w-[30%] flex active:border-b">
+                <a href="#about" class=" mx-auto">About</a>
+            </div>
+
+            <div class="w-[30%] flex active:border-b">
+                <a href=" #contact" class=" mx-auto">Contact</a>
+            </div>
+
+
+
+
+
+        </div> -->
+    </nav>
+
+    <div
+      class="container mt-1 fixed shadow-inner lg:hidden hidden w-[40%] bg-gray-700 bg-gray-8900 flex flex-col space-y-3 justify-center items-center right-0 z-50"
+      id="menuBar"
+    >
+      <div
+        class="flex flex-col gap-8 p-5 text-white opacity-90 font-semibold text-base"
+      >
+        <a href="" class="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5"
+            fill="#ffffff"
+            class="bi bi-house-door-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"
+            />
+          </svg>
+          Home
+        </a>
+        <a href="" class="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5"
+            fill="currentColor"
+            class="bi bi-gear"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"
+            />
+            <path
+              d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"
+            />
+          </svg>
+          Service
+        </a>
+        <a href="" class="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5"
+            fill="currentColor"
+            class="bi bi-people-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
+            />
+          </svg>
+          About
+        </a>
+        <a href="" class="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5"
+            fill="currentColor"
+            class="bi bi-person-lines-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"
+            />
+          </svg>
+          Contact Us
+        </a>
+      </div>
+    </div>
+
+    <!-- Home -->
+    <div class="left entry opacity-0">
+      <div class="container p-4" id="home">
+        <!-- <img src="../Assets/Ignite Webstack Logo Bg-White Slogan pvt ltd.jpg" class="w-auto h-25 mx-auto lg:h-30" alt=""> -->
+
+        <!-- <img src="../Assets/Project_76-01.jpg" class="w-auto h-50 mx-auto lg:h-60 mt-8  " alt=""> -->
+        <img
+          src="./Sources/InShot_20260301_225748177.gif"
+          class="w-auto h-50 mx-auto lg:h-60 mt-8"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div class="p-4 px-8 mx-auto left entry opacity-0">
+      <h1 class="text-3xl text-center text-orange-500 font-bold lg:text-5xl">
+        Every StartUp Begins With <span class="text-blue-500">Ignite !</span>
+      </h1>
+    </div>
+    <div class="container flex justify-center left entry opacity-0">
+      <div class="text-center text-xl text-gray-600 font-bold rounded-full p-3">
+        <h1>#Towards Next Dimension</h1>
+      </div>
+    </div>
+
+    <div
+      class="container text-center p-5 rounded-4xl w-[90%] mx-auto left entry opacity-0"
+    >
+      <p class="text-sm lg:text-lg font-medium">
+        At Ignite, we transform ideas into powerful digital solutions that help
+        businesses launch, grow, and scale with confidence. Our team blends
+        creativity, advanced technology, and strategic thinking to deliver
+        secure, high-performance products tailored to your goals.
+      </p>
+    </div>
+    <div class="container flex p-5 justify-evenly">
+      <a href="https://wa.me/918925999751?text=Hello ! I'm Interested In Your Services"
+        class="inline-block p-3 px-6 rounded-xl border-black text-white font-bold bg-blue-500 text-sm left entry opacity-0"
+      >
+        Get Started
+      </a>
+      <button
+        class="p-3 px-6 rounded-xl border-black text-white font-bold bg-orange-500 text-sm left entry opacity-0"
+      >
+        Discover More
+      </button>
+    </div>
+
+    <div class="container p-10 flex-col left entry opacity-0">
+      <h1 class="text-3xl text-center font-semiboldbold">What We Do</h1>
+      <div>
+        <img
+          src="./Sources/whatwedo.webp"
+          alt=""
+          class="mt-5 lg:h-80 mx-auto hidden lg:block"
+        />
+      </div>
+      <p class="text-center mt-5 font-medium text-sm lg:text-lg">
+        We build modern websites, custom applications, and AI-powered solutions
+        that help businesses grow efficiently. Our team focuses on performance,
+        security, and seamless user experience in every project. We partner with
+        startups and enterprises to turn ideas into impactful digital products.
+      </p>
+    </div>
+
+    <!-- Services -->
+
+    <div class="container left entry opacity-0" id="services">
+      <h1 class="text-3xl text-center font-semiboldbold animate-enter">
+        Our Core Services
+      </h1>
+    </div>
+
+    <!-- <div class="container p-4 px-8  mt-3 flex flex-wrap lg:grid lg:grid-cols-4   lg:gap-2 justify-center">
+
+        <div class="flex max-w-1/2 flex-col items-center p-2 lg:max-w-lg lg:p-8">
+            <h1 class="text-xl lg:text-3xl font-bold  text-center text-gray-600">Web Development</h1>
+            <div class="py-6">
+                <img src="../Assets/20892632.jpg" alt="" class="rounded-3xl h-40 w-40  lg:h-80 lg:w-auto ">
+            </div>
+            <p class="text-">We create fast, responsive, and SEO-friendly websites tailored to your business
+                needs. Our solutions ensure strong performance, security, and modern user experience.</p>
+        </div>
+
+        <div class="flex max-w-1/2 flex-col items-center lg:max-w-lg p-2 lg:p-8">
+            <h1 class="text-xl lg:text-3xl font-bold  text-center text-gray-600">Application Development</h1>
+            <div class="py-6">
+                <img src="../Assets/Project_44-04.jpg" alt="" class="rounded-3xl w-40 h-40 lg:h-80 lg:w-auto">
+            </div>
+            <p class="text-center">We build scalable web and mobile applications that streamline operations and enhance
+                customer engagement. Every app is designed for reliability, flexibility, and growth.</p>
+        </div>
+
+        <div class="flex max-w-1/2 flex-col items-center p-2 lg:max-w-lg lg:p-8">
+            <h1 class="text-xl lg:text-3xl font-bold  text-center text-gray-600">Desktop Softwares</h1>
+            <div class="py-6">
+                <img src="../Assets/vecteezy_developing-web-in-desktop_6042462.jpg" alt=""
+                    class="rounded-3xl  h-40 w-40 lg:h-80 lg:w-auto">
+            </div>
+            <p class="text-center">We develop powerful desktop applications that improve productivity and automate
+                business workflows. Our software is secure, efficient, and easy to use.</p>
+        </div>
+
+        <div class="flex max-w-1/2 flex-col items-center p-2 lg:max-w-lg lg:p-8">
+            <h1 class="text-xl lg:text-3xl font-bold  text-center text-gray-600">AI Agents Automations</h1>
+            <div class="py-6">
+                <img src="../Assets/vecteezy_ai-brain-circuit-artificial-intelligence-icon_77119618.jpg" alt=""
+                    class="rounded-3xl h-40 w-40 lg:h-80 lg:w-auto">
+            </div>
+            <p class="text-center">We design intelligent AI agents and automation systems that reduce manual work and
+                boost efficiency. Our solutions help businesses save time, cut costs, and scale smarter.</p>
+        </div>
+
+        <div class="flex max-w-1/2 flex-col items-center p-2 lg:max-w-lg lg:p-8">
+            <h1 class="text-xl lg:text-3xl font-bold  text-center text-gray-600">College Projects</h1>
+            <div class="py-6">
+                <img src="../Assets/3534945.jpg" alt="" class="rounded-3xl h-40 w-40 lg:h-80 lg:w-auto">
+            </div>
+            <p class="text-center">We assist students in building innovative, industry-ready college projects with
+                proper guidance and support. Our solutions focus on real-world implementation and academic excellence.
+            </p>
+        </div>
+
+        <div class="flex max-w-1/2 flex-col items-center p-2 lg:max-w-lg lg:p-8">
+            <h1 class="text-xl lg:text-3xl font-bold  text-center text-gray-600">Project Reports</h1>
+            <div class="py-6">
+                <img src="../Assets/40790.jpg" alt="" class="rounded-3xl h-40 w-40 lg:h-80 lg:w-auto">
+            </div>
+            <p class="text-center">We create well-structured, plagiarism-free project reports that meet academic
+                standards. Each report is professionally formatted and easy to understand.</p>
+        </div>
+
+        <div class="flex max-w-1/2 flex-col items-center p-2 lg:max-w-lg lg:p-8">
+            <h1 class="text-xl lg:text-3xl font-bold  text-center text-gray-600">Google Business Profiles</h1>
+            <div class="py-6">
+                <img src="../Assets/4266807.jpg" alt="" class="rounded-3xl h-40 w-40 lg:h-80 lg:w-auto">
+            </div>
+            <p class="text-center">We help businesses set up and optimize Google Business Profiles to improve local
+                visibility and customer reach. Our process ensures better rankings and stronger online presence.</p>
+        </div>
+
+
+
+        <div class="flex flex-col max-w-1/2 items-center p-2 lg:max-w-lg lg:p-8">
+            <h1 class="text-xl lg:text-3xl font-bold  text-center text-gray-600">Search Engine Optimizations</h1>
+            <div class="py-6">
+                <img src="../Assets/764e696a-2d39-4343-b835-84f1430b1fb6.jpg" alt=""
+                    class="rounded-3xl h-40 w-40 lg:h-80 lg:w-auto">
+            </div>
+            <p class="text-center">We provide effective SEO strategies that improve website rankings and organic
+                traffic. Our approach focuses on long-term growth and measurable results.</p>
+        </div>
+
+
+         <div class="flex flex-col max-w-1/2 items-center p-2 lg:max-w-lg lg:p-8">
+            <h1 class="text-xl lg:text-3xl font-bold  text-center text-gray-600">Poster Creations</h1>
+            <div class="py-6">
+                <img src="../Assets/11238639.jpg" alt="" class="rounded-3xl h-40 w-40 lg:h-100 lg:w-100">
+            </div>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quam ullam voluptate ipsum aliquid corrupti at nulla ipsa adipisci enim! Hic explicabo eius voluptates eos perspiciatis magni, ipsam culpa neque!</p>
+        </div> -->
+
+    <!-- </div> -->
+
+    <div
+      class="container p-3 mt-5 flex lg:grid lg:grid-cols-2 lg:items-stretch lg:space-y-4 lg:place-items-center flex-col items-center space-y-2"
+    >
+      <div
+        class="p-6 flex w-[90%] gap-6 shadow-xl rounded-2xl left entry opacity-0"
+      >
+        <div class="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-10 font-bold"
+            fill="currentColor"
+            class="bi bi-code-slash"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0"
+            />
+          </svg>
+        </div>
+        <div class="flex flex-col gap-5">
+          <h1 class="text-2xl lg:text-3xl font-bold text-amber-600">
+            Web Development
+          </h1>
+          <p class="text-start font-medium">
+            We create fast, responsive, and SEO-friendly websites tailored to
+            your business needs. Our solutions ensure strong performance,
+            security, and modern user experience.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="p-6 w-[90%] flex gap-6 shadow-xl rounded-2xl right entry opacity-0"
+      >
+        <div class="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-10 font-bold"
+            fill="currentColor"
+            class="bi bi-phone"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+            />
+            <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+          </svg>
+        </div>
+        <div class="flex flex-col gap-5">
+          <h1 class="text-2xl lg:text-3xl font-bold text-amber-600">
+            Mobile Application Development
+          </h1>
+          <p class="text-start font-medium w-[90%]">
+            We build scalable web and mobile applications that streamline
+            operations and enhance customer engagement. Every app is designed
+            for reliability, flexibility, and growth.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="p-6 w-[90%] flex gap-6 shadow-xl rounded-2xl left opacity-0 entry"
+      >
+        <div class="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-10 font-bold"
+            fill="currentColor"
+            class="bi bi-laptop"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"
+            />
+          </svg>
+        </div>
+        <div class="flex flex-col gap-5">
+          <h1 class="text-2xl lg:text-3xl font-bold text-amber-600">
+            Desktop Softwares
+          </h1>
+          <p class="text-start font-medium w-[90%]">
+            We develop powerful desktop applications that improve productivity
+            and automate business workflows. Our software is secure, efficient,
+            and easy to use.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="p-6 w-[90%] flex gap-6 shadow-xl rounded-2xl right opacity-0 entry"
+      >
+        <div class="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-10 font-bold"
+            fill="currentColor"
+            class="bi bi-robot"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5M3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.6 26.6 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.93.93 0 0 1-.765.935c-.845.147-2.34.346-4.235.346s-3.39-.2-4.235-.346A.93.93 0 0 1 3 9.219zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a25 25 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25 25 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135"
+            />
+            <path
+              d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2zM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5"
+            />
+          </svg>
+        </div>
+        <div class="flex flex-col gap-5">
+          <h1 class="text-2xl lg:text-3xl font-bold text-amber-600">
+            AI Agents Automations
+          </h1>
+          <p class="text-start font-medium w-[90%]">
+            We design intelligent AI agents and automation systems that reduce
+            manual work and boost efficiency. Our solutions help businesses save
+            time, cut costs, and scale smarter.
+          </p>
+        </div>
+      </div>
+      <div
+        class="p-6 w-[90%] flex gap-6 shadow-xl rounded-2xl left opacity-0 entry"
+      >
+        <div class="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-10 font-bold"
+            fill="currentColor"
+            class="bi bi-mortarboard-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917z"
+            />
+            <path
+              d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466z"
+            />
+          </svg>
+        </div>
+        <div class="flex flex-col gap-5">
+          <h1 class="text-2xl lg:text-3xl font-bold text-amber-600">
+            College Projects
+          </h1>
+          <p class="text-start font-medium">
+            We assist students in building innovative, industry-ready college
+            projects with proper guidance and support. Our solutions focus on
+            real-world implementation and academic excellence.
+          </p>
+        </div>
+      </div>
+      <div
+        class="p-6 w-[90%] flex gap-6 shadow-xl rounded-2xl right entry opacity-0"
+      >
+        <div class="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-10 font-bold"
+            fill="currentColor"
+            class="bi bi-file-earmark-pdf"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"
+            />
+            <path
+              d="M4.603 14.087a.8.8 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.7 7.7 0 0 1 1.482-.645 20 20 0 0 0 1.062-2.227 7.3 7.3 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.188-.012.396-.047.614-.084.51-.27 1.134-.52 1.794a11 11 0 0 0 .98 1.686 5.8 5.8 0 0 1 1.334.05c.364.066.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.86.86 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.7 5.7 0 0 1-.911-.95 11.7 11.7 0 0 0-1.997.406 11.3 11.3 0 0 1-1.02 1.51c-.292.35-.609.656-.927.787a.8.8 0 0 1-.58.029m1.379-1.901q-.25.115-.459.238c-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361q.016.032.026.044l.035-.012c.137-.056.355-.235.635-.572a8 8 0 0 0 .45-.606m1.64-1.33a13 13 0 0 1 1.01-.193 12 12 0 0 1-.51-.858 21 21 0 0 1-.5 1.05zm2.446.45q.226.245.435.41c.24.19.407.253.498.256a.1.1 0 0 0 .07-.015.3.3 0 0 0 .094-.125.44.44 0 0 0 .059-.2.1.1 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a4 4 0 0 0-.612-.053zM8.078 7.8a7 7 0 0 0 .2-.828q.046-.282.038-.465a.6.6 0 0 0-.032-.198.5.5 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822q.036.167.09.346z"
+            />
+          </svg>
+        </div>
+        <div class="flex flex-col gap-5">
+          <h1 class="text-2xl lg:text-3xl font-bold text-amber-600">
+            Project Reports
+          </h1>
+          <p class="text-start font-medium w-[90%]">
+            We create well-structured, plagiarism-free project reports that meet
+            academic standards. Each report is professionally formatted and easy
+            to understand.
+          </p>
+        </div>
+      </div>
+      <div
+        class="p-6 w-[90%] flex gap-6 shadow-xl rounded-2xl left entry opacity-0"
+      >
+        <div class="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-10 font-bold"
+            fill="currentColor"
+            class="bi bi-google"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"
+            />
+          </svg>
+        </div>
+        <div class="flex flex-col gap-5">
+          <h1 class="text-2xl lg:text-3xl font-bold text-amber-600">
+            Google Business Profiles
+          </h1>
+          <p class="text-start font-medium w-[90%]">
+            We help businesses set up and optimize Google Business Profiles to
+            improve local visibility and customer reach. Our process ensures
+            better rankings and stronger online presence.
+          </p>
+        </div>
+      </div>
+      <div
+        class="p-6 w-[90%] flex gap-6 shadow-xl rounded-2xl right entry opacity-0"
+      >
+        <div class="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-10 font-bold"
+            fill="currentColor"
+            class="bi bi-search"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+            />
+          </svg>
+        </div>
+        <div class="flex flex-col gap-5">
+          <h1 class="text-2xl lg:text-3xl font-bold text-amber-600">
+            Search Engine Optimizations
+          </h1>
+          <p class="text-start font-medium w-[90%]">
+            We provide effective SEO strategies that improve website rankings
+            and organic traffic. Our approach focuses on long-term growth and
+            measurable results.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plans -->
+
+    <div class="container p-5 mb-4">
+      <h1 class="text-3xl text-center font-semiboldbold">Business Plans</h1>
+    </div>
+
+    <div
+      class="container relative z-0 h-200 lg:h-auto p-10 flex flex-row justify-center overflow-x-hidden overflow-y-clip items-center gap-10 lg:gap-4 lg:flex-row lg:p-5"
+    >
+      <div
+        class="cards absolute lg:relative translate-x-[110%] animate-cardsScroll2 lg:animate-none lg:translate-x-[0%] flex flex-col h-170 w-[90vw] lg:w-1/4 rounded-3xl items-center border bg-green-50 shrink-0 lg:shrink"
+        id="economy"
+      >
+        <h1 class="text-3xl text-center font-bold my-4 opacity-60">Economy</h1>
+        <div class="p-2">
+          <img
+            src="./Sources/Money stress-rafiki.png"
+            alt=""
+            class="w-auto h-50 rounded-3xl"
+          />
+        </div>
+        <div class="flex flex-col gap-2 justify-center mt-2 p-3">
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#ccff90"
+                d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+              />
+            </svg>
+            Upto 5 Static Web Pages
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#ccff90"
+                d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+              />
+            </svg>
+            1 Year Free Hositing
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#ccff90"
+                d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+              />
+            </svg>
+            SSL Certificate Provided
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#ccff90"
+                d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+              />
+            </svg>
+            6 Months Maintainance
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#ccff90"
+                d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+              />
+            </svg>
+            Animations
+          </p>
+
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#f44336"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#fff"
+                d="M29.656,15.516l2.828,2.828l-14.14,14.14l-2.828-2.828L29.656,15.516z"
+              />
+              <path
+                fill="#fff"
+                d="M32.484,29.656l-2.828,2.828l-14.14-14.14l2.828-2.828L32.484,29.656z"
+              />
+            </svg>
+            DataBase
+          </p>
+
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#f44336"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#fff"
+                d="M29.656,15.516l2.828,2.828l-14.14,14.14l-2.828-2.828L29.656,15.516z"
+              />
+              <path
+                fill="#fff"
+                d="M32.484,29.656l-2.828,2.828l-14.14-14.14l2.828-2.828L32.484,29.656z"
+              />
+            </svg>
+            Google Business Profile
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#f44336"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#fff"
+                d="M29.656,15.516l2.828,2.828l-14.14,14.14l-2.828-2.828L29.656,15.516z"
+              />
+              <path
+                fill="#fff"
+                d="M32.484,29.656l-2.828,2.828l-14.14-14.14l2.828-2.828L32.484,29.656z"
+              />
+            </svg>
+            Search Engine Optimization
+          </p>
+
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#f44336"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#fff"
+                d="M29.656,15.516l2.828,2.828l-14.14,14.14l-2.828-2.828L29.656,15.516z"
+              />
+              <path
+                fill="#fff"
+                d="M32.484,29.656l-2.828,2.828l-14.14-14.14l2.828-2.828L32.484,29.656z"
+              />
+            </svg>
+            AI Agent Automations
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#f44336"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#fff"
+                d="M29.656,15.516l2.828,2.828l-14.14,14.14l-2.828-2.828L29.656,15.516z"
+              />
+              <path
+                fill="#fff"
+                d="M32.484,29.656l-2.828,2.828l-14.14-14.14l2.828-2.828L32.484,29.656z"
+              />
+            </svg>
+            Payment Integrations
+          </p>
+        </div>
+
+        <a href="https://wa.me/918925999751?text=Hello,%20I'm%20interested%20in%20the%20Economy%20Plan"
+          class="inline-block text-base font-bold p-3 px-5 bg-blue-500 text-white rounded-full absolute -bottom-5.5"
+        >
+          Make Enquiry
+        </a>
+      </div>
+
+      <div
+        class="cards lg:relative absolute translate-x-[110%] animate-cardsScroll2 lg:animate-none lg:translate-x-[0%] flex animate-businessCardScroll flex-col h-170 w-[90vw] lg:w-1/4 rounded-3xl items-center z-20 border-purple-700 border bg-purple-700 shrink-0 lg:shrink"
+        id="business"
+      >
+        <h1 class="text-2xl p-1.5 text-white font-semibold">Most Popular</h1>
+        <div
+          class="bg-cyan-50 rounded-3xl w-[100%] flex flex-col items-center grow"
+        >
+          <h1 class="text-3xl text-center font-bold my-4 opacity-60">
+            Business
+          </h1>
+          <div class="p-2">
+            <!-- <img src="../Assets/Абстрактная_векторная_иллюстрация_частного_самолета___Премиум_вектор-removebg-preview.png" alt=""
+                    class="w-full h-auto rounded-3xl"> -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              class="h-40"
+              viewBox="0 0 828.07821 484"
+              role="img"
+              artist="Katerina Limpitsouni"
+              source="https://undraw.co/"
+            >
+              <path
+                d="M688.4609,477h-485.5a17.01917,17.01917,0,0,1-17-17V225a17.01917,17.01917,0,0,1,17-17h485.5a17.01917,17.01917,0,0,1,17,17V460A17.01917,17.01917,0,0,1,688.4609,477Zm-485.5-267a15.017,15.017,0,0,0-15,15V460a15.017,15.017,0,0,0,15,15h485.5a15.017,15.017,0,0,0,15-15V225a15.017,15.017,0,0,0-15-15Z"
+                transform="translate(-185.9609 -208)"
+                fill="#3f3d56"
+              />
+              <circle cx="93.25" cy="49.5" r="9" fill="#ccc" />
+              <circle cx="93.25" cy="83.5" r="9" fill="#ccc" />
+              <circle cx="93.25" cy="117.5" r="9" fill="#ccc" />
+              <circle cx="93.25" cy="151.5" r="9" fill="#ccc" />
+              <circle cx="244.75" cy="219.5" r="9" fill="#ccc" />
+              <circle cx="179.75" cy="219.5" r="9" fill="#ccc" />
+              <circle cx="378.75" cy="219.5" r="9" fill="#ccc" />
+              <circle cx="310.75" cy="219.5" r="9" fill="#ccc" />
+              <path
+                d="M620.2109,258.5h-296a1,1,0,0,1,0-2h296a1,1,0,0,1,0,2Z"
+                transform="translate(-185.9609 -208)"
+                fill="#ccc"
+              />
+              <path
+                d="M620.2109,292.5h-296a1,1,0,0,1,0-2h296a1,1,0,0,1,0,2Z"
+                transform="translate(-185.9609 -208)"
+                fill="#ccc"
+              />
+              <path
+                d="M620.2109,326.5h-296a1,1,0,0,1,0-2h296a1,1,0,0,1,0,2Z"
+                transform="translate(-185.9609 -208)"
+                fill="#ccc"
+              />
+              <path
+                d="M620.2109,360.5h-296a1,1,0,0,1,0-2h296a1,1,0,0,1,0,2Z"
+                transform="translate(-185.9609 -208)"
+                fill="#ccc"
+              />
+              <path
+                d="M380.2109,394.5h-29a5.0058,5.0058,0,0,1-5-5v-27a5.0058,5.0058,0,0,1,5-5h29a5.00581,5.00581,0,0,1,5,5v27A5.00581,5.00581,0,0,1,380.2109,394.5Z"
+                transform="translate(-185.9609 -208)"
+                fill="#6c63ff"
+              />
+              <path
+                d="M445.2109,394.5h-29a5.00573,5.00573,0,0,1-5-5v-61a5.00573,5.00573,0,0,1,5-5h29a5.00573,5.00573,0,0,1,5,5v61A5.00573,5.00573,0,0,1,445.2109,394.5Z"
+                transform="translate(-185.9609 -208)"
+                fill="#6c63ff"
+              />
+              <path
+                d="M511.2109,394.5h-29a5.00573,5.00573,0,0,1-5-5v-95a5.00573,5.00573,0,0,1,5-5h29a5.00573,5.00573,0,0,1,5,5v95A5.00573,5.00573,0,0,1,511.2109,394.5Z"
+                transform="translate(-185.9609 -208)"
+                fill="#6c63ff"
+              />
+              <path
+                d="M579.2109,394.5h-29a5.00573,5.00573,0,0,1-5-5v-128a5.00573,5.00573,0,0,1,5-5h29a5.00573,5.00573,0,0,1,5,5v128A5.00573,5.00573,0,0,1,579.2109,394.5Z"
+                transform="translate(-185.9609 -208)"
+                fill="#6c63ff"
+              />
+              <path
+                d="M849.41372,686.34423c-8.99256-7.59865-14.45479-19.60227-13.02232-31.28789s10.30472-22.42829,21.81332-24.90978,24.62761,4.38768,28.12315,15.62987c1.92376-21.67449,4.14055-44.25713,15.6641-62.715,10.43429-16.71314,28.50667-28.672,48.093-30.81147s40.20832,5.941,52.42363,21.40027,15.20618,37.93388,6.65089,55.68242c-6.30238,13.07473-17.91358,22.80511-30.07923,30.72127a194.12948,194.12948,0,0,1-132.77224,29.04621Z"
+                transform="translate(-185.9609 -208)"
+                fill="#f2f2f2"
+              />
+              <path
+                d="M983.14,558.63886A317.62453,317.62453,0,0,0,938.8759,602.593a318.5511,318.5511,0,0,0-49.85571,83.314c-.89773,2.1999,2.67454,3.15751,3.56229.98207a316.75881,316.75881,0,0,1,93.16977-125.638c1.84429-1.5018-.78315-4.10164-2.61223-2.61223Z"
+                transform="translate(-185.9609 -208)"
+                fill="#fff"
+              />
+              <path
+                d="M754.57076,411.05762a17.509,17.509,0,0,1-3.38574-.33936h-.00049q-.30543-.06079-.61084-.13135L505.67647,353.56738c-2.65991-.61963-4.427-2.293-4.11011-3.89306a2.65908,2.65908,0,0,1,2.03907-1.88233,7.41836,7.41836,0,0,1,3.62207-.08056l246.41772,51.46191c5.54834,1.1582,9.40015,4.56348,8.769,7.75146-.33056,1.66846-1.7998,2.96192-4.13745,3.64258A13.356,13.356,0,0,1,754.57076,411.05762Z"
+                transform="translate(-185.9609 -208)"
+                fill="#3f3d56"
+              />
+              <path
+                d="M702.69264,403.16892a10.05575,10.05575,0,0,0,14.52487-5.17531l35.72708.745-9.8976-15.71213-32.40963,1.70134a10.11028,10.11028,0,0,0-7.94472,18.44107Z"
+                transform="translate(-185.9609 -208)"
+                fill="#ffb8b8"
+              />
+              <path
+                d="M718.2109,397.46172l-.18587-10.95079a4.52375,4.52375,0,0,1,4.06742-4.55553l64.201-6.19566,53.4904-17.53817a12.81886,12.81886,0,1,1,7.63274,24.47234l-59.2065,17.52973-65.38677,1.66091a4.50905,4.50905,0,0,1-4.42846-3.21338A4.522,4.522,0,0,1,718.2109,397.46172Z"
+                transform="translate(-185.9609 -208)"
+                fill="#3f3d56"
+              />
+              <polygon
+                points="627.258 471.782 614.998 471.781 609.166 424.493 627.26 424.494 627.258 471.782"
+                fill="#ffb8b8"
+              />
+              <path
+                d="M816.34559,691.66577l-39.53051-.00146v-.5a15.38605,15.38605,0,0,1,15.38647-15.38624h.001l24.1438.001Z"
+                transform="translate(-185.9609 -208)"
+                fill="#2f2e41"
+              />
+              <polygon
+                points="663.258 471.782 650.998 471.781 645.166 424.493 663.26 424.494 663.258 471.782"
+                fill="#ffb8b8"
+              />
+              <path
+                d="M852.34559,691.66577l-39.53051-.00146v-.5a15.38605,15.38605,0,0,1,15.38647-15.38624h.001l24.1438.001Z"
+                transform="translate(-185.9609 -208)"
+                fill="#2f2e41"
+              />
+              <path
+                d="M857.44684,488.67394l-2.92742,173.69392a4,4,0,0,1-4.36158,3.91617l-14.34623-1.3042a4,4,0,0,1-3.62589-3.67442l-8.39886-108.34525a1,1,0,0,0-1.99629.03944l-4.19795,110.82575a4,4,0,0,1-3.99713,3.84859H798.20986a4,4,0,0,1-3.99255-3.756l-10.77047-176.244,64-16Z"
+                transform="translate(-185.9609 -208)"
+                fill="#2f2e41"
+              />
+              <circle
+                cx="625.06469"
+                cy="93.01646"
+                r="24.56103"
+                fill="#ffb8b8"
+              />
+              <path
+                d="M781.25544,493.84093a4.46917,4.46917,0,0,1-1.3645-3.165L778.2342,372.23351a28.50083,28.50083,0,0,1,19.282-27.44141c2.301-10.43945,14.54785-11.74707,21.68726-11.59082a11.08483,11.08483,0,0,1,8.97753,4.92286l5.11792,7.67675,11.28028,6.61231a28.528,28.528,0,0,1,13.47021,30.8164l-1.73657,7.89942a181.54018,181.54018,0,0,0,1.69775,84.66015l3.49463,13.32422a4.49944,4.49944,0,0,1-4.698,5.62793l-4.05859-.3125a4.49385,4.49385,0,0,1-4.13257-4.03808l-.67163-6.7168a.50005.50005,0,0,0-.99512,0l-.65014,6.50293a4.49951,4.49951,0,0,1-4.40845,4.05176l-57.43091.88379c-.02392,0-.0476.001-.07153.001A4.47131,4.47131,0,0,1,781.25544,493.84093Z"
+                transform="translate(-185.9609 -208)"
+                fill="#3f3d56"
+              />
+              <path
+                d="M812.94684,315.17394c.10071,3.472,2.51116,5.48065,5.47053,7.29924s6.41876,2.60712,9.808,3.36775a2.99861,2.99861,0,0,0,4.40515-2.62457l3.1084-11.82324a74.84063,74.84063,0,0,0,2.39306-11.537c.74862-7.50914-1.031-15.58706-6.27222-21.01634s-14.33084-7.358-20.6116-3.17478c-7.45361-9.51978-41.52343,11.513-33.11914,18.13281,1.49512,1.17768,3.78064-.31249,5.67841-.45693s4.02454.18937,5.23,1.66219c1.575,1.9242.889,4.79052,1.538,7.1909a6.71431,6.71431,0,0,0,8.48369,4.34833,23.08806,23.08806,0,0,0,4.39987-2.8286c1.45566-.96958,3.29506-1.686,4.93368-1.0745,2.15991.80607,2.92723,3.45041,3.12242,5.74755A53.23512,53.23512,0,0,0,812.94684,315.17394Z"
+                transform="translate(-185.9609 -208)"
+                fill="#2f2e41"
+              />
+              <path
+                d="M994.892,692h-381a1,1,0,0,1,0-2h381a1,1,0,0,1,0,2Z"
+                transform="translate(-185.9609 -208)"
+                fill="#3f3d56"
+              />
+              <polygon
+                points="621.25 173 617.25 222 596.25 273 627.25 223 621.25 173"
+                opacity="0.2"
+              />
+              <path
+                d="M777.30034,499.99214a10.05576,10.05576,0,0,0,.31761-15.41606l13.37856-33.136-18.20228,3.67571-9.9139,30.903a10.11028,10.11028,0,0,0,14.42,13.97337Z"
+                transform="translate(-185.9609 -208)"
+                fill="#ffb8b8"
+              />
+              <path
+                d="M776.32622,485.378l-10.30362-3.71344a4.52376,4.52376,0,0,1-2.81506-5.41962l16.99724-62.21933,2.59146-56.2325a12.81885,12.81885,0,1,1,25.588,1.55127l-4.62838,61.57336L782.09828,482.636a4.509,4.509,0,0,1-4.57608,2.99941A4.5218,4.5218,0,0,1,776.32622,485.378Z"
+                transform="translate(-185.9609 -208)"
+                fill="#3f3d56"
+              />
+              <path
+                d="M620.2109,394.5h-296a1,1,0,0,1,0-2h296a1,1,0,0,1,0,2Z"
+                transform="translate(-185.9609 -208)"
+                fill="#3f3d56"
+              />
+            </svg>
+          </div>
+          <div class="flex flex-col gap-2 justify-center mt-2 p-3">
+            <p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 48 48"
+                class="h-6 w-6 inline"
+              >
+                <path
+                  fill="#4caf50"
+                  d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+                />
+                <path
+                  fill="#ccff90"
+                  d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+                />
+              </svg>
+              Upto 5 Dynamic Pages
+            </p>
+            <p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 48 48"
+                class="h-6 w-6 inline"
+              >
+                <path
+                  fill="#4caf50"
+                  d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+                />
+                <path
+                  fill="#ccff90"
+                  d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+                />
+              </svg>
+              1 Year Free Hositing
+            </p>
+            <p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 48 48"
+                class="h-6 w-6 inline"
+              >
+                <path
+                  fill="#4caf50"
+                  d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+                />
+                <path
+                  fill="#ccff90"
+                  d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+                />
+              </svg>
+              SSL Certificate Provided
+            </p>
+            <p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 48 48"
+                class="h-6 w-6 inline"
+              >
+                <path
+                  fill="#4caf50"
+                  d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+                />
+                <path
+                  fill="#ccff90"
+                  d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+                />
+              </svg>
+              6 Months Maintainance
+            </p>
+            <p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 48 48"
+                class="h-6 w-6 inline"
+              >
+                <path
+                  fill="#4caf50"
+                  d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+                />
+                <path
+                  fill="#ccff90"
+                  d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+                />
+              </svg>
+              Animations
+            </p>
+            <p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 48 48"
+                class="h-6 w-6 inline"
+              >
+                <path
+                  fill="#4caf50"
+                  d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+                />
+                <path
+                  fill="#ccff90"
+                  d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+                />
+              </svg>
+              DataBase
+            </p>
+
+            <p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 48 48"
+                class="h-6 w-6 inline"
+              >
+                <path
+                  fill="#f44336"
+                  d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+                />
+                <path
+                  fill="#fff"
+                  d="M29.656,15.516l2.828,2.828l-14.14,14.14l-2.828-2.828L29.656,15.516z"
+                />
+                <path
+                  fill="#fff"
+                  d="M32.484,29.656l-2.828,2.828l-14.14-14.14l2.828-2.828L32.484,29.656z"
+                />
+              </svg>
+              Google Business Profile
+            </p>
+            <p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 48 48"
+                class="h-6 w-6 inline"
+              >
+                <path
+                  fill="#f44336"
+                  d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+                />
+                <path
+                  fill="#fff"
+                  d="M29.656,15.516l2.828,2.828l-14.14,14.14l-2.828-2.828L29.656,15.516z"
+                />
+                <path
+                  fill="#fff"
+                  d="M32.484,29.656l-2.828,2.828l-14.14-14.14l2.828-2.828L32.484,29.656z"
+                />
+              </svg>
+              Search Engine Optimization
+            </p>
+
+            <p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 48 48"
+                class="h-6 w-6 inline"
+              >
+                <path
+                  fill="#f44336"
+                  d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+                />
+                <path
+                  fill="#fff"
+                  d="M29.656,15.516l2.828,2.828l-14.14,14.14l-2.828-2.828L29.656,15.516z"
+                />
+                <path
+                  fill="#fff"
+                  d="M32.484,29.656l-2.828,2.828l-14.14-14.14l2.828-2.828L32.484,29.656z"
+                />
+              </svg>
+              AI Agent Automations
+            </p>
+            <p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 48 48"
+                class="h-6 w-6 inline"
+              >
+                <path
+                  fill="#f44336"
+                  d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+                />
+                <path
+                  fill="#fff"
+                  d="M29.656,15.516l2.828,2.828l-14.14,14.14l-2.828-2.828L29.656,15.516z"
+                />
+                <path
+                  fill="#fff"
+                  d="M32.484,29.656l-2.828,2.828l-14.14-14.14l2.828-2.828L32.484,29.656z"
+                />
+              </svg>
+              Payment Integrations
+            </p>
+          </div>
+
+          <a href="https://wa.me/918925999751?text=Hello,%20I'm%20interested%20in%20the%20Business%20Plan"
+            class="inline-block text-base font-bold p-3 px-5 bg-blue-500 text-white rounded-full absolute -bottom-5.5"
+          >
+            Make Enquiry
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="cards absolute lg:relative translate-x-[110%] animate-cardsScroll2 lg:animate-none lg:translate-x-[0%] flex flex-col h-170 w-[90vw] lg:w-1/4 rounded-3xl items-center border z-20 bg-blue-50 shrink-0 lg:shrink"
+        id="premium"
+      >
+        <h1 class="text-3xl text-center font-bold my-4 opacity-60">Premium</h1>
+        <div class="p-2">
+          <img
+            src="./Sources/Investment data-rafiki.png"
+            alt=""
+            class="w-full h-50 rounded-3xl"
+          />
+        </div>
+        <div class="flex flex-col gap-2 justify-center mt-2 p-3">
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#ccff90"
+                d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+              />
+            </svg>
+            Upto 5 Web Pages
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#ccff90"
+                d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+              />
+            </svg>
+            1 Year Free Hositing
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#ccff90"
+                d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+              />
+            </svg>
+            SSL Certificate Provided
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#ccff90"
+                d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+              />
+            </svg>
+            6 Months Maintainance
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#ccff90"
+                d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+              />
+            </svg>
+            Animations
+          </p>
+
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#ccff90"
+                d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+              />
+            </svg>
+            DataBase
+          </p>
+
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#ccff90"
+                d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+              />
+            </svg>
+            Google Bsuiness Profile
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#ccff90"
+                d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+              />
+            </svg>
+            Search Engine Optimization
+          </p>
+
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#f44336"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#fff"
+                d="M29.656,15.516l2.828,2.828l-14.14,14.14l-2.828-2.828L29.656,15.516z"
+              />
+              <path
+                fill="#fff"
+                d="M32.484,29.656l-2.828,2.828l-14.14-14.14l2.828-2.828L32.484,29.656z"
+              />
+            </svg>
+            AI Agent Automations
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#f44336"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#fff"
+                d="M29.656,15.516l2.828,2.828l-14.14,14.14l-2.828-2.828L29.656,15.516z"
+              />
+              <path
+                fill="#fff"
+                d="M32.484,29.656l-2.828,2.828l-14.14-14.14l2.828-2.828L32.484,29.656z"
+              />
+            </svg>
+            Payment Integrations
+          </p>
+        </div>
+
+        <a href="https://wa.me/918925999751?text=Hello,%20I'm%20interested%20in%20the%20Premium%20Plan"
+          class="inline-block text-base font-bold p-3 px-5 bg-blue-500 text-white rounded-full absolute -bottom-5.5"
+        >
+          Make Enquiry
+        </a>
+      </div>
+
+      <div
+        class="cards absolute lg:relative translate-x-[110%] animate-cardsScroll2 lg:animate-none lg:translate-x-[0%] flex flex-col h-170 w-[90vw] lg:w-1/4 rounded-3xl z-20 items-center border bg-red-50 shrink-0 lg:shrink"
+        id="elite"
+      >
+        <h1 class="text-3xl text-center font-bold my-4 opacity-60">Elite</h1>
+        <div class="p-2">
+          <img
+            src="./Sources/Personal goals-amico.png"
+            alt=""
+            class="w-full h-50 rounded-3xl"
+          />
+        </div>
+        <div class="flex flex-col gap-2 justify-center mt-2 p-3">
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#ccff90"
+                d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+              />
+            </svg>
+            Upto 5 Web Pages
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#ccff90"
+                d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+              />
+            </svg>
+            1 Year Free Hositing
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#ccff90"
+                d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+              />
+            </svg>
+            SSL Certificate Provided
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#ccff90"
+                d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+              />
+            </svg>
+            6 Months Maintainance
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#ccff90"
+                d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+              />
+            </svg>
+            Advanced Animations
+          </p>
+
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#ccff90"
+                d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+              />
+            </svg>
+            DataBase
+          </p>
+
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#ccff90"
+                d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+              />
+            </svg>
+            Google Business Profile
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#ccff90"
+                d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+              />
+            </svg>
+            Search Engine Optimization
+          </p>
+
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#ccff90"
+                d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+              />
+            </svg>
+            AI Agent Automations
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              class="h-6 w-6 inline"
+            >
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+              />
+              <path
+                fill="#ccff90"
+                d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"
+              />
+            </svg>
+            Payment Integrations
+          </p>
+        </div>
+
+        <a href="https://wa.me/918925999751?text=Hello,%20I'm%20interested%20in%20the%20Elite%20Plan"
+          class="inline-block text-base font-bold p-3 px-5 bg-blue-500 text-white rounded-full absolute -bottom-5.5"
+        >
+          Make Enquiry
+        </a>
+      </div>
+    </div>
+
+    <!-- About -->
+
+    <div class="container p-10 flex-col mt-5 left entry opacity-0" id="about">
+      <h1 class="text-3xl text-center font-semiboldbold">Who We Are</h1>
+      <div class="">
+        <img
+          src="./Sources/3rd gif .gif"
+          alt=""
+          class="mt-2 p-1 h-60 w-auto lg:h-100 lg:w-auto mx-auto"
+        />
+      </div>
+      <p class="text-center mt-2 font-medium mx-auto text-sm lg:text-lg">
+        We are a passionate team dedicated to delivering innovative digital
+        solutions that empower businesses to grow and succeed. With expertise in
+        modern technologies, Ignite focuses on building reliable, scalable, and
+        user-friendly products tailored to each client’s needs. Our mission is
+        to combine creativity and technology to create meaningful impact and
+        long-term value for every business we serve.
+      </p>
+    </div>
+
+    <div class="container left entry opacity-0">
+      <h1 class="text-3xl text-center font-semiboldbold">
+        Sparks Of Our Ignite
+      </h1>
+    </div>
+    <div
+      class="container p-5 space-y-2 lg:space-y-0 flex flex-col lg:flex-row lg:mt-3"
+    >
+      <div class="flex flex-col items-center lg:w-1/2 p-4 left entry opacity-0">
+        <div>
+          <img
+            src="./Sources\Ashif.JPG.webp"
+            alt=""
+            class="h-80 rounded-3xl p- border bg-gray-100"
+          />
+        </div>
+        <h1 class="text-2xl font-bold mt-4 text-gray-700 lg:text-3xl">
+          Mohammed Ashif A <span class="text-xl font-semibold">B.E,ECE</span>
+        </h1>
+        <h2 class="text-xl font-bold p-2 text-center">
+          Founder Of Ignite & Ignite Webstack
+        </h2>
+
+        <div class="flex items-center space-x-5 p-3">
+          <a href="https://wa.me/918925999751?text=Hello,%20I%20want%20to%20contact%20you%20regarding%20your%20services"
+            ><img src="./Sources/whatsapp.webp" alt="" class="h-8"
+          /></a>
+          <a href="mailto:ashifoff@gmail.com"><img src="./Sources/gmail.webp" alt="" class="h-8" /></a>
+          <a href="https://www.instagram.com/the_ashif_5"
+            ><img src="./Sources/instagram.webp" alt="" class="h-10"
+          /></a>
+          <a href="https://linkedin.com/in/ashif5"
+            ><img src="./Sources/linkedin.webp" alt="" class="h-8"
+          /></a>
+        </div>
+
+        <p class="text-center text-base font-medium p-2 px-4 lg:px-20">
+          Mohammed Ashif, Founder of Ignite & Ignite Webstack, is a versatile
+          technology leader with strong expertise in Embedded Systems, Java
+          Development, and Full-Stack Web Development. He specializes in
+          building robust backend architectures and responsive front-end
+          interfaces using Bootstrap, Tailwind CSS, and modern JavaScript
+          frameworks. Known for his sharp problem-solving mindset, he focuses on
+          delivering scalable, efficient, and high-performance digital solutions
+          that drive real business impact.
+        </p>
+        <!-- <button class="p-3 px-8 bg-blue-500 rounded-3xl text-white mt-3 flex items-center gap-2 fill-white" id="#ashifBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 inline" viewBox="0 0 32 32" version="1.1">
+                    <title>chain</title>
+                    <path
+                        d="M0 22.944q0 2.464 1.76 4.224l3.072 3.104q1.76 1.728 4.224 1.728t4.256-1.728l2.688-2.976q1.376-1.344 1.664-3.232t-0.512-3.552l-6.784 6.784q-0.576 0.576-1.408 0.576t-1.44-0.576l-2.816-2.816q-0.576-0.608-0.576-1.408t0.576-1.408l6.784-6.816q-1.632-0.8-3.52-0.512t-3.264 1.664l-2.944 2.72q-1.76 1.76-1.76 4.224zM9.792 20.256q0 0.832 0.576 1.408t1.408 0.576 1.408-0.576l8.48-8.48q0.576-0.576 0.576-1.408t-0.576-1.408q-0.608-0.576-1.44-0.576t-1.408 0.576l-8.448 8.48q-0.576 0.576-0.576 1.408zM14.336 7.968q-0.288 1.888 0.512 3.552l6.816-6.816q0.576-0.576 1.408-0.576t1.408 0.576l2.816 2.848q0.576 0.576 0.576 1.408t-0.576 1.408l-6.784 6.784q1.632 0.832 3.52 0.512t3.264-1.664l2.944-2.944q1.76-1.76 1.76-4.224t-1.76-4.256l-2.816-2.816q-1.76-1.76-4.224-1.76t-4.256 1.76l-2.944 2.944q-1.344 1.376-1.664 3.264z" />
+                </svg>
+                Connect
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 " viewBox="0 0 24 24" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
+                        fill="#ffffff" />
+                </svg>
+            </button>
+
+            <div class="flex flex-col text-2xl bg-gray-200 p-3 mt-5 rounded-2xl border space-y-2 hidden" id="#ashifList">
+
+                <div>
+                    <a href="" class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                            id="Capa_1" viewBox="0 0 552.77 552.77" xml:space="preserve" class="h-6 w-6 fill-black">
+                            <g>
+                                <g>
+                                    <path
+                                        d="M17.95,528.854h71.861c9.914,0,17.95-8.037,17.95-17.951V196.8c0-9.915-8.036-17.95-17.95-17.95H17.95    C8.035,178.85,0,186.885,0,196.8v314.103C0,520.816,8.035,528.854,17.95,528.854z" />
+                                    <path
+                                        d="M17.95,123.629h71.861c9.914,0,17.95-8.036,17.95-17.95V41.866c0-9.914-8.036-17.95-17.95-17.95H17.95    C8.035,23.916,0,31.952,0,41.866v63.813C0,115.593,8.035,123.629,17.95,123.629z" />
+                                    <path
+                                        d="M525.732,215.282c-10.098-13.292-24.988-24.223-44.676-32.791c-19.688-8.562-41.42-12.846-65.197-12.846    c-48.268,0-89.168,18.421-122.699,55.27c-6.672,7.332-11.523,5.729-11.523-4.186V196.8c0-9.915-8.037-17.95-17.951-17.95h-64.192    c-9.915,0-17.95,8.035-17.95,17.95v314.103c0,9.914,8.036,17.951,17.95,17.951h71.861c9.915,0,17.95-8.037,17.95-17.951V401.666    c0-45.508,2.748-76.701,8.244-93.574c5.494-16.873,15.66-30.422,30.488-40.649c14.83-10.227,31.574-15.343,50.24-15.343    c14.572,0,27.037,3.58,37.393,10.741c10.355,7.16,17.834,17.19,22.436,30.104c4.604,12.912,6.904,41.354,6.904,85.33v132.627    c0,9.914,8.035,17.951,17.949,17.951h71.861c9.914,0,17.949-8.037,17.949-17.951V333.02c0-31.445-1.982-55.607-5.941-72.48    S535.836,228.581,525.732,215.282z" />
+                                </g>
+                            </g>
+                        </svg>
+                        <h1>Linked In</h1>
+                    </a>
+                </div>
+
+                <div class="flex flex-col">
+                    <a href="" class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor"
+                            class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <path
+                                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                        </svg>
+                        <h1>Whatsapp</h1>
+                    </a>
+                </div>
+
+                <div class="flex flex-col">
+                    <a href="" class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-black mt-0.5" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z">
+                            </path>
+                        </svg>
+                        <h1>Mail</h1>
+
+                    </a>
+
+                </div>
+
+                <div class="flex flex-col">
+                    <a href="" class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-black" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334">
+                            </path>
+                        </svg>
+                        <h1>Instagram</h1>
+                    </a>
+                </div>
+
+            </div> -->
+      </div>
+
+      <div class="flex flex-col items-center lg:w-1/2 p-4 left entry opacity-0">
+        <div>
+          <img
+            src="./Sources\maniprofile.webp"
+            alt=""
+            class="h-80 rounded-3xl p- border-2"
+          />
+        </div>
+        <h1 class="text-2xl font-bold mt-4 text-gray-700 lg:text-3xl">
+          Mani Bharathi R <span class="text-xl font-semibold">B.E,CSE</span>
+        </h1>
+        <h2 class="text-xl font-bold p-2 text-center">
+          Co-Founder Of Ignite Webstack
+        </h2>
+
+        <div class="flex items-center space-x-5 p-3">
+          <a href="https://wa.me/919080571145?text=Hello,%20I%20want%20to%20contact%20you%20regarding%20your%20services"
+            ><img src="./Sources/whatsapp.webp" alt="" class="h-8"
+          /></a>
+          <a href="mailto:manibharathi642@gmail.com"><img src="./Sources/gmail.webp" alt="" class="h-8" /></a>
+          <a href="https://www.instagram.com/manibharathi.___"
+            ><img src="./Sources/instagram.webp" alt="" class="h-10"
+          /></a>
+          <a href="https://www.linkedin.com/in/mani-bharathi-r-275190252"
+            ><img src="./Sources/linkedin.webp" alt="" class="h-8"
+          /></a>
+        </div>
+        <p class="text-center text-base font-medium p-2 px-4 lg:px-20">
+          Mani Bharathi, Co-Founder of Ignite Webstack, is a multi-skilled
+          technology professional specializing in DevOps, Python development,
+          and Generative AI architecture. He has strong experience in building
+          scalable applications using Flask and full-stack technologies, along
+          with hands-on expertise as a Zoho Developer and Odoo Developer. With a
+          focus on automation, system efficiency, and modern AI-driven
+          solutions, Mani Bharathi plays a key role in delivering reliable and
+          high-impact digital products at Ignite.
+        </p>
+
+        <!-- <button class="p-3 px-8 bg-blue-500 rounded-3xl text-white mt-3 flex items-center gap-2 fill-white" id="#maniBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 inline" viewBox="0 0 32 32" version="1.1">
+                    <title>chain</title>
+                    <path
+                        d="M0 22.944q0 2.464 1.76 4.224l3.072 3.104q1.76 1.728 4.224 1.728t4.256-1.728l2.688-2.976q1.376-1.344 1.664-3.232t-0.512-3.552l-6.784 6.784q-0.576 0.576-1.408 0.576t-1.44-0.576l-2.816-2.816q-0.576-0.608-0.576-1.408t0.576-1.408l6.784-6.816q-1.632-0.8-3.52-0.512t-3.264 1.664l-2.944 2.72q-1.76 1.76-1.76 4.224zM9.792 20.256q0 0.832 0.576 1.408t1.408 0.576 1.408-0.576l8.48-8.48q0.576-0.576 0.576-1.408t-0.576-1.408q-0.608-0.576-1.44-0.576t-1.408 0.576l-8.448 8.48q-0.576 0.576-0.576 1.408zM14.336 7.968q-0.288 1.888 0.512 3.552l6.816-6.816q0.576-0.576 1.408-0.576t1.408 0.576l2.816 2.848q0.576 0.576 0.576 1.408t-0.576 1.408l-6.784 6.784q1.632 0.832 3.52 0.512t3.264-1.664l2.944-2.944q1.76-1.76 1.76-4.224t-1.76-4.256l-2.816-2.816q-1.76-1.76-4.224-1.76t-4.256 1.76l-2.944 2.944q-1.344 1.376-1.664 3.264z" />
+                </svg>
+                Connect
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 " viewBox="0 0 24 24" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
+                        fill="#ffffff" />
+                </svg>
+            </button>
+
+
+            <div class="flex flex-col text-2xl bg-gray-200 p-3 mt-5 rounded-2xl border space-y-2 hidden" id="#maniList">
+
+                <div>
+                    <a href="" class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                            id="Capa_1" viewBox="0 0 552.77 552.77" xml:space="preserve" class="h-6 w-6 fill-black">
+                            <g>
+                                <g>
+                                    <path
+                                        d="M17.95,528.854h71.861c9.914,0,17.95-8.037,17.95-17.951V196.8c0-9.915-8.036-17.95-17.95-17.95H17.95    C8.035,178.85,0,186.885,0,196.8v314.103C0,520.816,8.035,528.854,17.95,528.854z" />
+                                    <path
+                                        d="M17.95,123.629h71.861c9.914,0,17.95-8.036,17.95-17.95V41.866c0-9.914-8.036-17.95-17.95-17.95H17.95    C8.035,23.916,0,31.952,0,41.866v63.813C0,115.593,8.035,123.629,17.95,123.629z" />
+                                    <path
+                                        d="M525.732,215.282c-10.098-13.292-24.988-24.223-44.676-32.791c-19.688-8.562-41.42-12.846-65.197-12.846    c-48.268,0-89.168,18.421-122.699,55.27c-6.672,7.332-11.523,5.729-11.523-4.186V196.8c0-9.915-8.037-17.95-17.951-17.95h-64.192    c-9.915,0-17.95,8.035-17.95,17.95v314.103c0,9.914,8.036,17.951,17.95,17.951h71.861c9.915,0,17.95-8.037,17.95-17.951V401.666    c0-45.508,2.748-76.701,8.244-93.574c5.494-16.873,15.66-30.422,30.488-40.649c14.83-10.227,31.574-15.343,50.24-15.343    c14.572,0,27.037,3.58,37.393,10.741c10.355,7.16,17.834,17.19,22.436,30.104c4.604,12.912,6.904,41.354,6.904,85.33v132.627    c0,9.914,8.035,17.951,17.949,17.951h71.861c9.914,0,17.949-8.037,17.949-17.951V333.02c0-31.445-1.982-55.607-5.941-72.48    S535.836,228.581,525.732,215.282z" />
+                                </g>
+                            </g>
+                        </svg>
+                        <h1>Linked In</h1>
+                    </a>
+                </div>
+
+                <div class="flex flex-col">
+                    <a href="" class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor"
+                            class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <path
+                                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                        </svg>
+                        <h1>Whatsapp</h1>
+                    </a>
+                </div>
+
+                <div class="flex flex-col">
+                    <a href="" class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-black mt-0.5" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z">
+                            </path>
+                        </svg>
+                        <h1>Mail</h1>
+
+                    </a>
+
+                </div>
+
+                <div class="flex flex-col">
+                    <a href="" class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-black" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334">
+                            </path>
+                        </svg>
+                        <h1>Instagram</h1>
+                    </a>
+                </div>
+
+            </div> -->
+      </div>
+    </div>
+
+    <!-- Testinomials -->
+
+    <!-- <div class="container p-3">
+        <h1 class="text-center text-3xl font-medium">Testimonials</h1>
+    </div>
+
+
+    <div class="container flex justify-center p-2 ">
+        <div class="h-100 p-5 flex flex-col border rounded-4xl w-[80%]">
+
+            <div>
+                <h1 class="text-3xl text-center">Ashif The Best Developer</h1>
+            </div>
+
+            <div>
+                <h1 class="text-3xl text-center">Ashif God Of Embedded Systems</h1>
+            </div>
+
+            <div>
+                <h1 class="text-3xl text-center">Ashif Java King</h1>
+            </div>
+
+        </div>
+    </div> -->
+
+    <!-- Contact -->
+
+    <div class="container p-3 left entry opacity-0" id="contact">
+      <h1 class="text-3xl text-center font-semiboldbold">Contact</h1>
+    </div>
+
+    <div class="container p-4 left entry opacity-0">
+      <form
+        action=""
+        id="form"
+        class="p-5 flex flex-col items-center bg-linear-to-br from-blue-100 to-blue-500 rounded-2xl space-y-2 text-black lg:flex-row lg:flex-wrap lg:justify-center lg:py-10 lg:space-y-5 lg:place-items-start"
+      >
+        <div class="flex flex-col space-y-1 lg:w-1/2 lg:ps-20">
+          <label for="" class="font-medium">Name</label>
+          <input
+            type="text"
+            class="h-10 w-80 border rounded-xl p-3 lg:w-[90%]"
+            placeholder="Enter Your name Here "
+            id="name"
+            required
+          />
+        </div>
+
+        <div class="flex flex-col space-y-1 lg:w-1/2 lg:ps-20">
+          <label for="" class="font-medium">Mobile</label>
+          <input
+            type="text"
+            class="h-10 w-80 border rounded-xl p-3 lg:w-[90%]"
+            placeholder="Enter Your Mobile Here "
+            id="mobile"
+            required
+            type="tel"
+            pattern="[0-9]{10}"
+          />
+        </div>
+
+        <div class="flex flex-col space-y-1 lg:w-1/2 lg:ps-20 grow-0">
+          <label for="" class="font-medium">Email</label>
+          <input
+            type="text"
+            class="h-10 w-80 border rounded-xl p-3 lg:w-[90%]"
+            placeholder="Enter Your Email Here "
+            id="email"
+          />
+        </div>
+
+        <div
+          class="flex flex-col space-y-1 lg:w-1/2 lg:ps-20 justify-center lg:pt-0"
+        >
+          <label for="" class="font-medium">Message</label>
+          <textarea
+            name=""
+            class="w-80 border rounded-xl p-3 lg:w-[90%] min-h-15 max-h-40"
+            placeholder="Enter Your Message Here "
+            id="message"
+          ></textarea>
+        </div>
+
+        <button
+          class="bg-blue-200 p-2 px-6 rounded-xl border-black border-0 text-black mt-4"
+          id="submit"
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <!-- Footer -->
+
+    <div class="container p-3 flex flex-col bg-gray-800 text-white lg:px-10">
+      <div class="p-2">
+        <img src="./Sources/logowhite.webp" alt="" class="h-12 lg:h-15" />
+        <p class="text-justify text-sm p-3 lg:text-base">
+          Ignite Webstack is committed to delivering innovative, reliable, and
+          scalable digital solutions that help businesses grow in the modern
+          world. From web and application development to AI automation and
+          enterprise solutions, we combine creativity with cutting-edge
+          technology to build products that make a real impact.
+        </p>
+      </div>
+      <div class="flex p-3 justify-between">
+        <div class="flex p-2 flex-col space-y-2">
+          <h1 class="font-medium text-base">Company</h1>
+          <h2><a href="#home">Home</a></h2>
+          <h2><a href="#services">Services</a></h2>
+          <h2><a href="#about">About</a></h2>
+          <h2><a href="#contact">Contact</a></h2>
+        </div>
+
+        <div class="p-2">
+          <h1 class="font-medium">Connect With Us On</h1>
+
+          <div class="flex gap-5 py-5">
+            <!-- Whatsapp -->
+            <a href="https://wa.me/918925999751?text=Hello,%20I%20want%20to%20contact%20you%20regarding%20your%20services" class="text-white">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="currentColor"
+                class="bi bi-whatsapp"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+                />
+              </svg>
+            </a>
+
+            <!-- Linked in -->
+            <a href="https://linkedin.com/company/your_company" class="text-white">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              version="1.1"
+              id="Capa_1"
+              viewBox="0 0 552.77 552.77"
+              xml:space="preserve"
+              class="h-6 w-6 fill-white"
+            >
+              <g>
+                <g>
+                  <path
+                    d="M17.95,528.854h71.861c9.914,0,17.95-8.037,17.95-17.951V196.8c0-9.915-8.036-17.95-17.95-17.95H17.95    C8.035,178.85,0,186.885,0,196.8v314.103C0,520.816,8.035,528.854,17.95,528.854z"
+                  />
+                  <path
+                    d="M17.95,123.629h71.861c9.914,0,17.95-8.036,17.95-17.95V41.866c0-9.914-8.036-17.95-17.95-17.95H17.95    C8.035,23.916,0,31.952,0,41.866v63.813C0,115.593,8.035,123.629,17.95,123.629z"
+                  />
+                  <path
+                    d="M525.732,215.282c-10.098-13.292-24.988-24.223-44.676-32.791c-19.688-8.562-41.42-12.846-65.197-12.846    c-48.268,0-89.168,18.421-122.699,55.27c-6.672,7.332-11.523,5.729-11.523-4.186V196.8c0-9.915-8.037-17.95-17.951-17.95h-64.192    c-9.915,0-17.95,8.035-17.95,17.95v314.103c0,9.914,8.036,17.951,17.95,17.951h71.861c9.915,0,17.95-8.037,17.95-17.951V401.666    c0-45.508,2.748-76.701,8.244-93.574c5.494-16.873,15.66-30.422,30.488-40.649c14.83-10.227,31.574-15.343,50.24-15.343    c14.572,0,27.037,3.58,37.393,10.741c10.355,7.16,17.834,17.19,22.436,30.104c4.604,12.912,6.904,41.354,6.904,85.33v132.627    c0,9.914,8.035,17.951,17.949,17.951h71.861c9.914,0,17.949-8.037,17.949-17.951V333.02c0-31.445-1.982-55.607-5.941-72.48    S535.836,228.581,525.732,215.282z"
+                  />
+                </g>
+              </g>
+            </svg>
+            </a>
+
+            <!-- Mail -->
+            <a href="mailto:ignitewebstack@gmail.com" class="text-white">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 fill-white mt-0.5"
+              fill="currentColor"
+              class="bi bi-envelope"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"
+              />
+            </svg>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/ignitewebstack" class="text-white">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 fill-white"
+              fill="currentColor"
+              class="bi bi-instagram"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+              />
+            </svg>
+            </a>
+          </div>
+          <h2 class="p-1"><a href="tel:8925999751">+ 91-8925999751</a></h2>
+          <h2 class="p-1"><a href="tel:9080571145">+ 91-9080571145</a></h2>
+        </div>
+      </div>
+    </div>
+
+    <footer class="container text-center p-4 pt-1 bg-gray-800 text-white">
+      <h1 class="">Copyright 2026 @ All Right Reserved</h1>
+      <!-- <h1 class="">Powered By <a href="">Ignite Webstack</a></h1> -->
+    </footer>
+  </body>
+  <script src="./index.js"></script>
+</html>
